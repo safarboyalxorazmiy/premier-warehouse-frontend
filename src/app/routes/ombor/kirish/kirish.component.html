@@ -1,0 +1,39 @@
+<html lang="uz">
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body>
+        <h1 style="
+            color: #fff;
+            position: absolute;
+            right: 30px;
+            top: 30px;
+            font-size: 60px;">
+            Kunlik: {{ count }}
+        </h1>
+
+        <h1 style="
+            color: #fff;
+            position: absolute;
+            left: 30px;
+            top: 30px;
+            font-size: 60px;">
+            Oylik: {{ count }}
+        </h1>
+
+        <div class="container">
+            <div class="demo-flex-spacer"></div>
+        
+            <div class="webflow-style-input">
+                <input class="" [(ngModel)]="serialValue" (ngModelChange)="submitSeria()"  type="text" id="serialInput" placeholder="Seriyani kiriting.." />
+                <button type="submit">
+                    <i class="fa-solid fa-arrow-right fa-2xs"></i>
+                </button>
+            </div>
+        
+            <div class="demo-flex-spacer"></div>
+            <h1 class="demo">Omborga mahsulot kiritish</h1>
+            <a class="demo">https://www.premier.uz/</a>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "/api/*": {
+    "target": "http://192.168.5.195:3003",
+    "secure": false,
+    "pathRewrite": {
+      "^/folder/sub-folder/": "/new-folder/"
+    },
+    "changeOrigin": true,
+    "logLevel": "debug"
+  }
+}

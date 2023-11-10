@@ -1,0 +1,64 @@
+<html lang="uz">
+    <head>
+        <link rel="stylesheet" href="">
+        <style>   
+            
+        </style>
+    </head>
+    <body>
+        <div class="limiter">
+            <div class="container-table100">
+                <div class="wrap-table100">
+                    <div class="webflow-style-input" id="search">
+                        <input class="" type="text" id="serialInput" placeholder="Seriya orqali qidirish.." />
+                        <button type="submit">
+                            <i class="fa-solid fa-arrow-right fa-2xs"></i>
+                        </button>
+                    </div>
+
+                    <div class="table" style="display: block; width: 100%;" *ngFor="let infos of warehouseInfo">
+                        <div class="row header" style="display: block; width: 100%; border-bottom: 1px solid #000;" *ngIf="infos[0].id == 1">
+                            <div class="cell">
+                                Seriya
+                            </div>
+
+                            <div class="cell">
+                                Model
+                            </div>
+
+                            <div class="cell">
+                                Sana
+                            </div>
+                        </div>
+
+                        <p style="
+                            display: flex; 
+                            align-items: center; 
+                            justify-content: center; 
+                            width: 100%; 
+                            margin-top: 10px; 
+                            margin-bottom: 10px; 
+                            color: #fff;"
+                            
+                            *ngIf="infos[0].id != 1
+                        ">
+                            <span style="background-color: rgba(57, 63, 84, 0.8); padding: 8px 40px; border-radius: 40px; font-weight: bold;">{{ infos[0].createdDate }}</span>
+                        </p>
+
+                        <div class="row" style="display: block; width: 100%; border-bottom: 1px solid #000;" *ngFor="let info of infos">
+                            <div class="cell" data-title="Seriya">
+                                {{ info.serial }}
+                            </div>
+                            <div class="cell" data-title="Model">
+                                {{ info.model }}
+                            </div>
+                            <div class="cell" data-title="Sana">
+                                {{ info.createdDate }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
